@@ -1,6 +1,10 @@
 <template>
   <section class="offer">
-    <img :src="bgImg" alt="" class="offer__bg" />
+    <picture>
+      <source type="image/webp" srcset="@/assets/img/main-image.webp" />
+      <source type="image/jpeg" srcset="@/assets/img/main-image.jpeg" />
+      <img width="1170" height="650" src="@/assets/img/main-image.jpeg" alt="Wheat field" class="offer__bg" />
+    </picture>
     <div class="offer__container">
       <h1 class="offer__title title">Test assignment for front-end developer</h1>
       <p class="offer__text">
@@ -16,7 +20,6 @@
 
 <script setup>
 import SimpleButton from './UI/SimpleButton.vue'
-import bgImg from '@/assets/img/main-image.jpeg'
 
 defineEmits(['goToSignUp'])
 </script>
@@ -30,7 +33,7 @@ defineEmits(['goToSignUp'])
   padding: 89px 16px;
   display: flex;
   align-items: center;
-  @media (max-width:768px){
+  @media (max-width: 768px) {
     padding: 40px 16px 71px;
   }
   &__bg {

@@ -6,7 +6,9 @@
     <h3 class="user__title">{{ userData.name }}</h3>
     <div class="user__info">
       <div class="user__position">{{ userData.position }}</div>
-      <a :href="`mailto:${userData.email}`" class="user__link">{{ userData.email }}</a>
+      <a v-tooltip :title="userData.email" :href="`mailto:${userData.email}`" class="user__link">{{
+        userData.email
+      }}</a>
       <a :href="`tel:${userData.phone}`" class="user__link">{{ userNumber }}</a>
     </div>
   </article>

@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header__container">
-      <a href="#" class="header__logo"><img :src="logo" alt="" width="104" height="26" /></a>
+      <div class="header__logo"><img :src="logo" alt="" width="104" height="26" /></div>
       <div class="header__active">
         <simple-button @click="$emit('goToUsers')">Users</simple-button>
         <simple-button @click="$emit('goToSignUp')">Sign up</simple-button>
